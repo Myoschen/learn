@@ -8,7 +8,7 @@ import List from "./List";
 
 const { v1: uuidv4 } = require('uuid');
 
-function App() {
+const App = () => {
     const inputRef = useRef();
     const [todoList, setTodoList] = useState([]);
 

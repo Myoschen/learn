@@ -1,6 +1,6 @@
 import React from "react";
 
-function Button(props) {
+const Button = (props) => {
     const setColor = () => {
         if (props.color === 'green')
             return '#3DDC97';

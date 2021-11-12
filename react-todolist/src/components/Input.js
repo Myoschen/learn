@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
-function Input(props) {
+const Input = (props) => {
     return (
         <div className="todo__input">
             <input type="text" ref={props.inputRef} />

@@ -5,7 +5,7 @@ import { useState } from "react";
 import Item from "./Item";
 import Button from "./Button";
 
-function List(props) {
+const List = (props) => {
     const [done, setDone] = useState(false);
 
     const todoList = props.todoList;
@@ -32,7 +32,7 @@ function List(props) {
             {handleTodoList()}
             {
                 todoList.length > 0 &&
-                <Button className="btn f-undo-done" color={'transparent'} func={handleToggle}>{done ? 'DONE' : 'UNDO'}</Button>
+                <Button className="btn f-undo-done" color={'transparent'} func={handleToggle}>GO {!done ? 'DONE' : 'TODO'}</Button>
             }
         </div>
     );
