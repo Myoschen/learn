@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
-function Item(props) {
+const Item = (props) => {
     return (
         <div className="item">
             <div className="item__content">
