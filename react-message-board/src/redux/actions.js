@@ -16,9 +16,9 @@ export const addMessage = (name, content) => {
         payload: {
             id: id,
             date: date.join('-'),
-            img: "https://static.fotor.com.cn/assets/stickers/18531/77a12b1f-90d4-41ff-92d3-e134a081e18c_medium_thumb.jpg",
             name: name,
-            content: content
+            content: content,
+            isEditing: false
         }
     }
 }
@@ -32,10 +32,10 @@ export const removeMessage = (id) => {
 
 export const editMessage = (id, content) => {
     return {
-        type: REMOVE_MESSAGE,
+        type: EDIT_MESSAGE,
         payload: {
-            id: id,
-            content: content
+            eID: id,
+            eContent: content
         }
     }
 }

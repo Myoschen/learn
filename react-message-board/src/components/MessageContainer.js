@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeMessage } from "../redux/actions";
+import { removeMessage, editMessage } from "../redux/actions";
 
 import Message from "./Message";
 const MessageContainer = () => {
@@ -12,7 +12,16 @@ const MessageContainer = () => {
             {
                 messages.map(m => {
                     return (
-                        <Message key={m.id} img={m.img} name={m.name} date={m.date} content={m.content} func={() => dispatch(removeMessage(m.id))} />
+                        <Message
+                            key={m.id}
+                            id={m.id}
+                            name={m.name}
+                            date={m.date}
+                            content={m.content}
+                            isEditing={m.isEditing}
+                            onRemoveClick={() => dispatch(removeMessage(m.id))}
+                            onEditClick={() => dispatch(editMessage(m.id, ''))}
+                        />
                     );
                 })
             }
