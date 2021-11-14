@@ -2,6 +2,8 @@ const { v4: uuid_v4 } = require('uuid');
 export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const REMOVE_MESSAGE = 'REMOVE_MESSAGE';
 export const EDIT_MESSAGE = 'EDIT_MESSAGE';
+export const LIKE_MESSAGE = 'LIKE_MESSAGE';
+export const DISLIKE_MESSAGE = 'DISLIKE_MESSAGE';
 
 export const addMessage = (name, content) => {
     const id = uuid_v4();
@@ -18,6 +20,8 @@ export const addMessage = (name, content) => {
             date: date.join('-'),
             name: name,
             content: content,
+            like: 0,
+            dislike: 0,
             isEditing: false
         }
     }
@@ -37,5 +41,20 @@ export const editMessage = (id, content) => {
             eID: id,
             eContent: content
         }
+    }
+}
+
+export const likeMessage = (id) => {
+    return {
+        type: LIKE_MESSAGE,
+        id
+    }
+}
+
+
+export const dislikeMessage = (id) => {
+    return {
+        type: DISLIKE_MESSAGE,
+        id
     }
 }

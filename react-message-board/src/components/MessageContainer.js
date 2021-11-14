@@ -14,11 +14,7 @@ const MessageContainer = () => {
                     return (
                         <Message
                             key={m.id}
-                            id={m.id}
-                            name={m.name}
-                            date={m.date}
-                            content={m.content}
-                            isEditing={m.isEditing}
+                            {...m}
                             onRemoveClick={() => dispatch(removeMessage(m.id))}
                             onEditClick={() => dispatch(editMessage(m.id, ''))}
                         />
