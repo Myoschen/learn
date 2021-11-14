@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
+:root {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.btn {
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn:active {
+    box-shadow: 2px 2px 2px #888 inset, -2px -2px 2px #888 inset;
+}
+
+.message-board {
+    width: 40%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-board>h1 {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px auto 70px;
+    font-weight: 500;
+}
+
+.message__input-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.message__input-form input, .message__input-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+.message__input-form textarea {
+    box-sizing: border-box;
+    width: inherit;
+    height: 200px;
+    font-weight: 600;
+    resize: none;
+}
+
+.message-container {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.message {
+    box-sizing: border-box;
+    width: inherit;
+    display: flex;
+    position: relative;
+    padding: 20px;
+    gap: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.message+.message {
+    margin-top: 30px;
+}
+
+.message__img {
+    width: 50px;
+}
+
+.message__img>img {
+    width: inherit;
+    object-fit: cover;
+}
+
+.message__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.message__info {
+    flex-grow: 1;
+}
+
+.message__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.message__info>.date {
+    color: #aaa;
+}
+
+.message__content {
+    width: inherit;
+}
+
+.message__remove-btn {
+    background-color: transparent;
+    color: #d64550;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.msg-ctl {
+    padding: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.msg-ctl+.msg-ctl {
+    margin-left: 5px;
+}
