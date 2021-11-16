@@ -4,12 +4,13 @@ import { useDispatch } from "react-redux";
 import { editMessage, likeMessage, dislikeMessage } from "../redux/actions";
 import { BiLike, BiDislike, BiMessageEdit } from "react-icons/bi";
 import { ImCross } from "react-icons/im";
+import { animated } from 'react-spring';
 
-const Message = ({ id, name, date, content, like, dislike, isEditing, onRemoveClick, onEditClick }) => {
+const Message = ({ style, id, name, date, content, like, dislike, isEditing, onRemoveClick, onEditClick }) => {
     const [text, setText] = useState(content);
     const dispatch = useDispatch();
     return (
-        <div className="message" style={{ borderColor: isEditing && "#946e83" }}>
+        <animated.div className="message" style={style} >
             <div className="message__info">
                 <div className="name">{name}</div>
                 <div className="date">{date}</div>
@@ -41,7 +42,7 @@ const Message = ({ id, name, date, content, like, dislike, isEditing, onRemoveCl
                         </form>
                     )
             }
-        </div >
+        </animated.div>
     )
 }
 
