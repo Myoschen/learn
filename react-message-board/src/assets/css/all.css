@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&family=Squada+One&display=swap');
+
 :root {
     font-size: 16px;
 }
@@ -17,13 +18,13 @@ textarea, input {
     line-height: 1.5;
     letter-spacing: 2px;
     outline: none;
-    border: 1px solid #aaa;
+    border: 1px solid #bbb;
     transition: .5s;
     resize: none;
 }
 
 textarea:focus, input:focus {
-    box-shadow: 2px 0 5px #9ea8a3 inset;
+    box-shadow: 2px 2px 5px #9ea8a3 inset, -2px -2px 5px #9ea8a3 inset;
 }
 
 .btn {
@@ -42,12 +43,13 @@ textarea:focus, input:focus {
 }
 
 .btn:active {
-    box-shadow: 2px 2px 2px #888 inset, -2px -2px 2px #888 inset;
+    box-shadow: 2px 2px 2px #888 inset;
 }
 
 .message-board {
+    box-sizing: border-box;
     width: 40%;
-    max-width: 600px;
+    min-width: 500px;
     padding: 20px;
     margin: 20px auto 20px;
     display: flex;
@@ -120,6 +122,7 @@ textarea:focus, input:focus {
 
 .message__content {
     width: inherit;
+    word-wrap: break-word;
 }
 
 .message__control {
@@ -160,4 +163,13 @@ textarea:focus, input:focus {
 
 .message__editing>button {
     align-self: end;
+}
+
+@media (max-width: 576px) {
+    .message-board {
+        width: auto;
+        min-width: auto;
+        padding: 20px;
+        margin: 20px auto;
+    }
 }
