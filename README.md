@@ -6,5 +6,5 @@
 
 | 主題       | 連結                 |
 |------------|----------------------|
-| JavaScript | [READ](./javascript) |
-| Git        | [READ](./javascript) |
+| JavaScript | [READ](javascript/) |
+| Git        | [READ](git/) |
