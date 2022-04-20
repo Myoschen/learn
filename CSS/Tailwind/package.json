@@ -8,7 +8,7 @@
     "watch": "tailwindcss -i ./style.css -o ./css/main.css --watch"
   },
   "author": "willy14620",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.0.24"
   }
