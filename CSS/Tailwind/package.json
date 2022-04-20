@@ -1,0 +1,15 @@
+{
+  "name": "tailwind-crash-course",
+  "version": "1.0.0",
+  "description": "for tailwind crash course",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./style.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./style.css -o ./css/main.css --watch"
+  },
+  "author": "willy14620",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
